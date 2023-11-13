@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Age</title>
+    <title></title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
@@ -13,15 +13,18 @@
         }
 
         body {
-            background-color: #121212;
+            background-color: #050505;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #ffffff;
             font-family: 'Ubuntu', sans-serif;
+            overflow: hidden;
         }
-
+        p {
+            margin: 0 0 0 6px;
+        }
         #age-int {
             font-size: 52px;
         }
@@ -34,10 +37,10 @@
 
 <body>
     <div id="age">
+        <p>AGE</p>
         <span id="age-int"></span>
         <span id="age-dec"></span>
     </div>
-
     <script>
         function calculateAge() {
             var birthDate = new Date('2008-03-24');
@@ -45,8 +48,8 @@
             var age = (now - birthDate) / (365.25 * 24 * 60 * 60 * 1000);
             var ageStr = age.toFixed(9);
             var ageParts = ageStr.split('.');
-            document.getElementById('age-int').innerHTML = ageParts[0] + '.';
-            document.getElementById('age-dec').innerHTML = ageParts[1];
+            document.getElementById('age-int').innerHTML = ageParts[0] ;
+            document.getElementById('age-dec').innerHTML = '.' + ageParts[1];
         }
         setInterval(calculateAge, 50);
     </script>
