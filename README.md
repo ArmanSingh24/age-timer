@@ -5,6 +5,6 @@
 
 ``` 49. var birthDate = new Date('YYYY-MM-DD'); ```
 
-## Preview"
+## Preview
 
 Visit - https://armansingh24.github.io/age-timer/
